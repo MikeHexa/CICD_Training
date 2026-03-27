@@ -25,6 +25,10 @@ jobs:
       - name: Run Playwright tests
         run: npm run test
 
+        # PASO NUEVO: Crear archivo .nojekyll para evitar errores de ruteo
+      - name: Create .nojekyll
+        run: touch ./playwright-report/.nojekyll
+
       - name: Publish Playwright report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
