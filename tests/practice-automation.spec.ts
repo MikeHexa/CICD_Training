@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Practice Automation', () => {
+test.describe('Practice Automation Test', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('practice-test-login');
     await page.waitForLoadState('domcontentloaded');
   });
 
-  test('should display the correct page title on the home page test', async ({ page }) => {
+  test('should display the correct page title on the home page', async ({ page }) => {
     await page.screenshot({
       path: 'test-results/title_validation.png',
       fullPage: true,
